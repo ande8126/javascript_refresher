@@ -1,0 +1,3 @@
+# It's been so long...
+
+Just wanted to test out some vanilla JavaScript to familiarize myself with it as I work on ongoing React projects.
