@@ -34,16 +34,16 @@ function makeCard( value, suit ){
 function buildDeck(){
     //loop thru 1-13 to create cards
     for( let i=1; i<=13; i++ ){
-        createCard( i, 'Clubs')
+        makeCard( i, 'Clubs')
     }
     for( let i=1; i<=13; i++ ){
-        createCard( i, 'Spades')
+        makeCard( i, 'Spades')
     }
     for( let i=1; i<=13; i++ ){
-        createCard( i, 'Hearts')
+        makeCard( i, 'Hearts')
     }
     for( let i=1; i<=13; i++ ){
-        createCard( i, 'Diamonds')
+        makeCard( i, 'Diamonds')
     }
 }//end buildDeck()
 
