@@ -77,7 +77,7 @@ function randomCard(){
 //present total
 
 function die(){
-    let value = Math.floor(Math.random()*7)
+    let value = Math.floor(Math.random()*6 + 1)
     return value
 }// end die
 
