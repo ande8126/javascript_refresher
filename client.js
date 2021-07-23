@@ -48,4 +48,62 @@ function buildDeck(){
 }//end buildDeck()
 
 //function to determine value of hand
+function handValue(){
+    let sum = 0;
+    //loop thru hand
+    for( let i=0; i<hand.length; i++ ){
+        //add all values
+        sum += hand[i].value;
+    }
+    return sum;
+}//end handValue
 
+//add to hand
+function hitMe(){
+    hand.push( randomCard() );
+}
+
+//random card from deck
+function randomCard(){
+    const index = Math.floor(Math.random() * deck.length);
+    const rando = deck[ index ];
+    console.log( 'in randomCard ');
+    return rando;
+}
+
+// DICE ROLL //
+
+//roll two six-sided dice
+//present total
+
+function die(){
+    let value = Math.floor(Math.random()*7)
+    return value
+}// end die
+
+function rollTheDice(){
+    let die1 = die();
+    let die2 = die();
+    let roll = die1 + die2;
+    console.log( '...rolling' );
+    console.log( 'Roll:' );
+    console.log( 'Die 1:', die1 );
+    console.log( 'Die 2:', die2 );
+    return roll;
+}
+
+function diceGame(){
+    console.log( '...OK, time to play' );
+    let playerRoll = rollTheDice();
+    console.log( 'Player roll is: ', playerRoll );
+    let houseRoll = rollTheDice();
+    console.log( 'House roll is: ', houseRoll ); 
+    if( playerRoll > houseRoll ){
+        return 'You win!';
+    } 
+    else if( playerRoll < houseRoll ){
+        return 'You lose, sorry!';
+    } else {
+        return 'Tie! Ooo thats uncomfortable!';
+    }
+}
